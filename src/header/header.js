@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./header.module.css";
 import Iform from "./iform";
 import Popup from "./popup";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const icon = [
@@ -30,9 +31,6 @@ const Header = () => {
     setpick(false);
   };
 
-  const goTo = () => {
-    window.location.replace("http://localhost:3000/search");
-  };
   return (
     <React.Fragment>
       <div className={styles.head}>
@@ -55,9 +53,11 @@ const Header = () => {
             />
           );
         })}
-        <button className={styles.button} onClick={goTo}>
+        <Link to="/search">
+        <button className={styles.button}>
           Search
         </button>
+        </Link>
         <div className={pick ? styles.hien : styles.an}>
           <Popup ngay={changDate} />
         </div>

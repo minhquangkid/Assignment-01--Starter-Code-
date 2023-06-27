@@ -5,6 +5,7 @@ import MiddleCenter from "../../homePage/middlecenter";
 import MiddleBottom from "../../homePage/middlebottom";
 import Form from "../../homePage/form";
 import Foot from "../../homePage/foot";
+
 // không dùng  {} vì Middle là 1 component, hoặc là tên của 1 mảng trong file JSX hoắc JSON
 // dùng {} khi nó là 1 giá trị không phải là component
 import "./home.css"; // import trực tiếp mà ko cần tên khi nó là css

@@ -33,5 +33,6 @@ const Popup = (props) => {
   };
   return <DateRange ranges={[selectionRange]} onChange={handleSelect} />;
 };
-
+// muốn dùng DateRangePicker ta thay hết chỗ nào có DateRange thành DateRangePicker là xong
+// mở các console.log(ranges); để hiểu được các giá trị trả về
 export default Popup;
