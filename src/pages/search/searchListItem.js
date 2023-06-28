@@ -1,9 +1,8 @@
 import React from "react";
 import "./search.css";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+
 const SearchListItem = (props) => {
-  const goTo = () => {
-    window.location.replace("http://localhost:3000/detail");
-  };
 
   const cancel = () => {
     return (
@@ -44,9 +43,9 @@ const SearchListItem = (props) => {
                 <span className="rate">{props.item.rate}</span>
                 <p className="price">${props.item.price}</p>
                 <p className="inf">Includes taxes and fees</p>
-                <button className="avail" onClick={goTo}>
+                <Link to="/detail"><button className="avail">
                   See availability
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>
